@@ -1,11 +1,19 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import './Navbar.css'
+
+
 
 export default function Navbar() {
+  
+  const navigate = useNavigate;
+
+  
+
   return (
-    <nav>
-      <Link to='/'>Home</Link>
-      <Link to='/register'>Register</Link>
-      <Link to='/login'>Login</Link>
-    </nav>
-  )
+    <div className="bg-white flex items-center justify-between px-6 py-2 drop-shadow">
+        <h2 className="text-xl font-medium text-black py-2">Welcome</h2>
+        
+        <Link to="/login" className='font-medium underline'>Logout</Link>
+    </div>
+  );
 }
